@@ -1,6 +1,25 @@
 # 🚀 Modern Full-Stack MERN Portfolio
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Site-success?style=for-the-badge&logo=vercel)](https://portfolio-livid-five-ae4egkqhkw.vercel.app/)
+
+
 A premium, high-performance developer portfolio built with the **MERN** stack (MongoDB, Express, React, Node.js) and powered by **Vite**. Features dynamic 3D tilt interactions, sleek animations, and a fully secured custom admin dashboard for content management.
+
+---
+
+## 📸 Interface Previews
+
+### 1. Hero Landing Experience
+A striking, highly-interactive landing area featuring cursor-tracking splash effects and glassmorphism elements to immediately capture attention.
+![Hero Section Preview](./assets/preview-1.png)
+
+### 2. Live Projects Showcase
+A sleek, grid-based gallery displaying full-stack projects dynamically fetched from the MongoDB Atlas database, complete with elegant hover states.
+![Projects Gallery Preview](./assets/preview-2.png)
+
+### 3. CMS & Blog Management
+A customized content management system integrated directly into the UI. Features an Admin Passcode secured gateway to securely publish and manage articles.
+![Blog Management Preview](./assets/preview-3.png)
 
 ---
 
