@@ -84,7 +84,7 @@ Create a `.env` file in the `backend/` directory:
 PORT=5000
 NODE_ENV=development
 MONGO_URI=mongodb+srv://<your_username>:<your_password>@cluster0...
-ADMIN_SECRET=likhith123
+ADMIN_SECRET=<your_secure_passcode>
 ```
 
 **Frontend (`portfolio/.env`)**
