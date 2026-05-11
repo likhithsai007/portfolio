@@ -15,7 +15,7 @@ const Blog = () => {
 
   const fetchBlogs = async () => {
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/blogs`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'https://portfolio-e6r3.onrender.com/api'}/blogs`);
       const data = await res.json();
       if (data.success) setBlogs(data.data);
     } catch (err) {
@@ -28,7 +28,7 @@ const Blog = () => {
     setStatus('posting');
     const tagsArray = formData.tags.split(',').map(t => t.trim()).filter(t => t);
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/blogs`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'https://portfolio-e6r3.onrender.com/api'}/blogs`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, tags: tagsArray })
@@ -51,7 +51,7 @@ const Blog = () => {
   const handleDeleteBlog = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/blogs/${blogToDelete}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'https://portfolio-e6r3.onrender.com/api'}/blogs/${blogToDelete}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ passcode: deletePasscode })

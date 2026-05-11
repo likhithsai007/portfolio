@@ -38,7 +38,7 @@ const Projects = () => {
   const [projectsData, setProjectsData] = useState([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/projects`)
+    fetch(`${import.meta.env.VITE_API_URL || 'https://portfolio-e6r3.onrender.com/api'}/projects`)
       .then(res => res.json())
       .then(data => {
         if (data.success && data.data.length > 0) {
