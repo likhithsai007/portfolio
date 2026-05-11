@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700;900&display=swap');
+
+:root {
+  --bg-color: #050505;
+  --text-color: #f5f5f7;
+  --text-muted: #86868b;
+  --accent-color: #ffffff;
+  --accent-glow: rgba(255, 255, 255, 0.2);
+  
+  --card-bg: #111111;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-hover: rgba(255, 255, 255, 0.12);
+
+  --font-primary: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+}
+
+:root.light-mode {
+  --bg-color: #f5f5f7;
+  --text-color: #1d1d1f;
+  --text-muted: #86868b;
+  --accent-color: #000000;
+  --accent-glow: rgba(0, 0, 0, 0.1);
+
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.1);
+  --card-hover: rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  caret-color: transparent; /* Hides the blinking text cursor on click */
+}
+
+input, textarea {
+  caret-color: #FF6B00; /* Keeps it visible if you ever add a contact form */
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-primary);
+  cursor: none;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+
+a, button {
+  color: inherit;
+  text-decoration: none;
+  cursor: none;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background-color: #FF6B00; /* Vibrant Orange */
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #FF6B00;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 8rem 0;
+  position: relative;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.section-title span {
+  color: var(--text-muted);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  cursor: none;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255,255,255,0.15);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-color);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Brand Hover Colors */
+.btn-mail:hover {
+  border-color: #EA4335 !important;
+  color: #EA4335 !important;
+  background: rgba(234, 67, 53, 0.1) !important;
+}
+.btn-linkedin:hover {
+  border-color: #0A66C2 !important;
+  color: #0A66C2 !important;
+  background: rgba(10, 102, 194, 0.1) !important;
+}
+.btn-github:hover {
+  border-color: #888888 !important;
+  color: #888888 !important;
+  background: rgba(136, 136, 136, 0.1) !important;
+}
+.btn-reddit:hover {
+  border-color: #FF4500 !important;
+  color: #FF4500 !important;
+  background: rgba(255, 69, 0, 0.1) !important;
+}
+
+/* Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #fff 0%, #888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Organic Blob Morph */
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.morph-blob {
+  animation: morph 6s ease-in-out infinite;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.3); /* Subtle inner shadow for liquid feel */
+}
