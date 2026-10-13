@@ -136,7 +136,7 @@ const Hero = () => {
               lineHeight: 1.6,
               textShadow: '0 2px 10px rgba(0,0,0,0.5)'
             }}>
-              I'm a 2nd-year CSE student passionate about building exceptional and accessible digital experiences for the web and mobile devices.
+              I'm a 3rd-year CSE student passionate about building exceptional and accessible digital experiences for the web and mobile devices.
             </p>
 
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
